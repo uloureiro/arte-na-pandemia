@@ -1,4 +1,4 @@
-# arte_na_pandemia
+# arte-na-pandemia
 
 ## Project setup
 ```
