@@ -17,9 +17,7 @@
           <v-expand-transition>
             <div v-show="show">
               <v-divider></v-divider>
-              <v-card-text>
-                {{ text }}
-              </v-card-text>
+              <v-card-text v-html="parsedText" />
             </div>
           </v-expand-transition>
         </v-card>
@@ -29,6 +27,9 @@
 </template>
 
 <script>
+import marked from 'marked'
+import DOMPurify from 'dompurify'
+
 export default {
   name: 'News',
   props: {
@@ -50,6 +51,9 @@ export default {
   computed: {
     imgHeight: function () {
       return this.show ? this.minHeight : this.maxHeight
+    },
+    parsedText: function () {
+      return DOMPurify.sanitize(marked(this.text))
     }
   }
 }
