@@ -10,7 +10,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target app",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "publ": "node gh-pages-publish.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
