@@ -4,7 +4,7 @@
       <v-row no-gutters>
         <v-col cols="12">
           <v-card class="mx-auto" flat>
-            <div class="text-h1 font-weight-thin">Arte na Pandemia</div>
+            <div class="text-sm-h1 text-h2 font-weight-thin">Arte na Pandemia</div>
             <div class="text-subtitle font-weight-light text-justify">
               <br/>
               Em novembro do ano passado, a OMS (Organização Mundial da Saúde) divulgou um estudo que analisou mais de novecentas pesquisas, que relacionam a arte à saúde e bem-estar social. O resultado confirma os benefícios que ela proporciona a nossa saúde física e mental. E no cenário atual, este estudo além de reforçar a importância da arte no nosso cotidiano, nos leva a refletir como a arte tem nos salvado em tempos de pandemia.
