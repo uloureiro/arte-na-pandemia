@@ -7,7 +7,7 @@
           class="align-end shrinkable-img"
           :src="image"
           :height="imgHeight"
-          @click="show = !show"
+          @click="selectNews"
           style="cursor: pointer" >
             <v-card-title class="white--text blend--difference">{{ title }}</v-card-title>
             <v-card-subtitle class="white--text blend--difference">
@@ -17,7 +17,7 @@
           <v-expand-transition>
             <div v-show="show">
               <v-divider></v-divider>
-              <v-card-text v-html="parsedText" />
+              <v-card-text v-html="text" class="body-1 text-justify"/>
             </div>
           </v-expand-transition>
         </v-card>
@@ -27,8 +27,7 @@
 </template>
 
 <script>
-import marked from 'marked'
-import DOMPurify from 'dompurify'
+import goTo from 'vuetify/es5/services/goto'
 
 export default {
   name: 'News',
@@ -51,9 +50,12 @@ export default {
   computed: {
     imgHeight: function () {
       return this.show ? this.minHeight : this.maxHeight
-    },
-    parsedText: function () {
-      return DOMPurify.sanitize(marked(this.text))
+    }
+  },
+  methods: {
+    selectNews: function (event) {
+      this.show = !this.show
+      if (this.show) { goTo(event.currentTarget, { offset: 20 }) }
     }
   }
 }
