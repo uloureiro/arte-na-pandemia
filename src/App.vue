@@ -25,15 +25,17 @@
         :subtitle='item.subtitle'
         :text='item.text'
       />
+      <ToTop />
     </v-main>
   </v-app>
 </template>
 
 <script>
 import News from './components/News'
+import ToTop from './components/ToTop'
 export default {
   name: 'App',
-  components: { News },
+  components: { News, ToTop },
   data: () => {
     return { news: [] }
   },
