@@ -3,4 +3,24 @@
 }
 .shrinkable-img {
   transition: height .2s cubic-bezier(0.25, 0.8, 0.5, 1);
+  cursor: pointer;
+}
+.v-card__text {
+  img {
+    max-width: 90%;
+    align-self: center;
+  }
+}
+
+.box {
+  border: 1px solid gray;
+  padding: 20px 50px 20px 50px;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+}
+
+.video {
+  margin: 20px;
+  text-align: center;
 }
