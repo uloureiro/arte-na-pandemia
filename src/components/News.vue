@@ -9,7 +9,7 @@
           :height="imgHeight"
           @click="selectNews"
           style="cursor: pointer" >
-            <v-card-title class="white--text blend--difference">{{ title }}</v-card-title>
+            <v-card-title class="text-h6 white--text blend--difference text-break">{{ title }}</v-card-title>
             <v-card-subtitle class="white--text blend--difference">
               {{ subtitle }}
             </v-card-subtitle>
@@ -55,7 +55,7 @@ export default {
   methods: {
     selectNews: function (event) {
       this.show = !this.show
-      if (this.show) { goTo(event.currentTarget, { offset: 20 }) }
+      if (this.show) { goTo(event.currentTarget, { offset: 10 }) }
     }
   }
 }
