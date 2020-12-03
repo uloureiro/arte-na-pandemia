@@ -27,6 +27,9 @@
       />
       <ToTop />
     </v-main>
+    <v-footer tile color="#fff" class="footer" padless>
+      <v-col class="text-caption text-center font-weight-thin"><a href="https://github.com/uloureiro/arte-na-pandemia">Sourced</a> and <a href="https://github.com/artenapandemia/artenapandemia.github.io">hosted</a> by Github. Made by <a href="https://github.com/uloureiro">uloureiro</a>.</v-col>
+    </v-footer>
   </v-app>
 </template>
 
