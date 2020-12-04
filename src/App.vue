@@ -23,7 +23,7 @@
         :image='item.image'
         :title='item.title'
         :subtitle='item.subtitle'
-        :text='item.text'
+        :url="item.url"
       />
       <ToTop />
     </v-main>

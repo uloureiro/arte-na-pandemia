@@ -17,7 +17,7 @@
           <v-expand-transition>
             <div v-show="show">
               <v-divider></v-divider>
-              <v-card-text v-html="text" class="body-1 text-justify"/>
+              <v-card-text v-html="htmlContent" class="body-1 text-justify"/>
             </div>
           </v-expand-transition>
         </v-card>
@@ -35,7 +35,7 @@ export default {
     image: String,
     title: String,
     subtitle: String,
-    text: String,
+    url: String,
     minHeight:
     {
       default: '100px'
@@ -44,9 +44,12 @@ export default {
       default: '200px'
     }
   },
-  data: () => ({
-    show: false
-  }),
+  data: function () {
+    return {
+      show: false,
+      htmlContent: ''
+    }
+  },
   computed: {
     imgHeight: function () {
       return this.show ? this.minHeight : this.maxHeight
@@ -56,7 +59,29 @@ export default {
     selectNews: function (event) {
       this.show = !this.show
       if (this.show) { goTo(event.currentTarget, { offset: 12 }) }
+    },
+    getContents: function (url) {
+      return new Promise((resolve, reject) => {
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', window.location.href.concat(url), true)
+        xhr.onload = function (e) {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              resolve(xhr.responseText)
+            } else {
+              reject(xhr.statusText)
+            }
+          }
+        }
+        xhr.onerror = function (e) {
+          reject(xhr.statusText)
+        }
+        xhr.send(null)
+      })
     }
+  },
+  created: function () {
+    this.getContents(this.url).then((result) => { this.htmlContent = result })
   }
 }
 </script>
