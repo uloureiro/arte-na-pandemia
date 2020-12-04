@@ -6,32 +6,32 @@
     "url": "corporal.html"
   },
   {
+    "image":"https://i.imgur.com/JgNXoSg.jpeg",
+    "title":"A união da música",
+    "subtitle":"",
+    "url":"musica.html"
+  },
+  {
+    "image":"https://i.imgur.com/hL4DD5o.jpg",
+    "title":"Adaptabilidade na produção de eventos",
+    "subtitle":"",
+    "url":"eventos.html"
+  },
+  {
+    "image":"https://i.imgur.com/aamZDSO.jpeg",
+    "title":"A arte visual em conexão com Sí e com o Próximo",
+    "subtitle":"",
+    "url":"visuais.html"
+  },
+  {
     "image":"https://i.imgur.com/XQpERWd.jpg",
     "title":"E o teatro, como ficou nessa pandemia?",
     "subtitle":"",
     "url":"teatro.html"
   },
   {
-    "image":"https://i.imgur.com/hGsPxLR.jpeg",
-    "title":"Música",
-    "subtitle":"",
-    "url":"musica.html"
-  },
-  {
-    "image":"https://i.imgur.com/aamZDSO.jpeg",
-    "title":"Artes visuais",
-    "subtitle":"",
-    "url":"visuais.html"
-  },
-  {
-    "image":"https://i.imgur.com/hL4DD5o.jpg",
-    "title":"Produtoras de Eventos",
-    "subtitle":"",
-    "url":"eventos.html"
-  },
-  {
     "image":"https://i.imgur.com/vUXiEFB.jpeg",
-    "title":"Fotografia",
+    "title":"A arte de fotografar",
     "subtitle":"",
     "url":"fotografia.html"
   }
