@@ -47,7 +47,7 @@ export default {
   data: function () {
     return {
       show: false,
-      htmlContent: ''
+      htmlContent: 'Carregando conteúdo, por favor aguarde...'
     }
   },
   computed: {
@@ -58,7 +58,7 @@ export default {
   methods: {
     selectNews: function (event) {
       this.show = !this.show
-      if (this.show) { goTo(event.currentTarget, { offset: 12 }) }
+      if (this.show) { goTo(event.currentTarget, { offset: 12, duration: 300 }) }
     },
     getContents: function (url) {
       return new Promise((resolve, reject) => {
